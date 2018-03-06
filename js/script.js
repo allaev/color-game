@@ -1,7 +1,7 @@
-var numSquares = 6;
+var numCircles = 6;
 var colors = [];
 var pickedColor;
-var squares = document.querySelectorAll(".square");
+var circles = document.querySelectorAll(".circle");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
@@ -13,7 +13,7 @@ init();
 function init(){
   //mode buttons event listeners
   setUpModeButtons();
-  setUpSquares();
+  setUpCircles();
   reset();
 }
 
@@ -23,17 +23,17 @@ function setUpModeButtons(){
       modeButtons[0].classList.remove("selected");
       modeButtons[1].classList.remove("selected");
       this.classList.add("selected");
-      this.textContent === "Easy" ? numSquares=3:numSquares = 6;
+      this.textContent === "Easy" ? numCircles=3:numCircles = 6;
       reset();
     });
   }
 }
 
-function setUpSquares(){
-  for (var i = 0; i < squares.length; i++) {
-    //add click listeners to squares
-    squares[i].addEventListener("click", function(){
-      //grab color of clicked square
+function setUpCircles(){
+  for (var i = 0; i < circles.length; i++) {
+    //add click listeners to circles
+    circles[i].addEventListener("click", function(){
+      //grab color of clicked circle
       var clickedColor = this.style.background;
       //compare color to picked color
       if (clickedColor === pickedColor) {
@@ -53,21 +53,21 @@ function setUpSquares(){
 
 function reset(){
   //generate new colors
-  colors = generateRandomColors(numSquares);
+  colors = generateRandomColors(numCircles);
   //pick a new random color
   pickedColor = pickColor();
   //change color display to match picked color
   colorDisplay.textContent = pickedColor;
   //change text after reset
   resetButton.textContent = "New Colors";
-  //change colors of squares
-  for (var i = 0; i < squares.length; i++) {
+  //change colors of circles
+  for (var i = 0; i < circles.length; i++) {
     if (colors[i]) {
-      squares[i].style.display = "block";
-      squares[i].style.background = colors[i];
+      circles[i].style.display = "block";
+      circles[i].style.background = colors[i];
     }
     else {
-      squares[i].style.display = "none";
+      circles[i].style.display = "none";
     }
   }
   //change h1 color to match background color
@@ -81,10 +81,10 @@ resetButton.addEventListener("click", function(){
 })
 
 function changeColors(color){
-  //loop through all squares
-  for (var i = 0; i < squares.length; i++) {
+  //loop through all circles
+  for (var i = 0; i < circles.length; i++) {
     //change each color to match given color
-    squares[i].style.background = color;
+    circles[i].style.background = color;
   }
 }
 
