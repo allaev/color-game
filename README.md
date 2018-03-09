@@ -14,3 +14,4 @@ A Javascript game that helps user to learn RGB color values.<br>
 Each time game generates a new RGB color, try to guess which one it is. Don't cheat! :stuck_out_tongue:<br>
 **New Colors/Play again** - Start a new game<br>
 **Hard/Easy** - 6 or 3 colors<br>
+<br>
