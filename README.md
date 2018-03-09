@@ -8,3 +8,5 @@ A Javascript game that helps user to learn RGB color values.<br>
 - CSS
 - Google Fonts
 - Responsive
+
+![color-game-screenshot](https://user-images.githubusercontent.com/34710484/37218797-5eb9da1c-23e3-11e8-80b5-7a0efe884e18.jpg)
